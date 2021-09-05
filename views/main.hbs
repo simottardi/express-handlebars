@@ -1,0 +1,21 @@
+<h1>The body of the index page</h1>
+
+<h2>even</h2>
+{{> even}}
+
+<h2>odd</h2>
+{{> odd}}
+
+
+
+{{!-- depending on the value of the listExists variable --}}
+{{!-- if it’s true then the list will be rendered --}}
+{{!-- if the value is equal to false the list will not be rendered --}}
+{{#if theNumber}} 
+<h2>prime numbers</h2>
+  <ul>
+    {{#each theNumber}}
+      <li>{{this.name}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
